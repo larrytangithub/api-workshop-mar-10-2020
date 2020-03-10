@@ -82,7 +82,7 @@ app.get('/information', (req, resp) => {
     //API key is in keys.weather
     const params = { 
         q:cityName,
-        appid:bc5b57447ab0f5032f0ad4f1bbe11836
+        appid:keys.weather
     }
 
     getWeather(params)
@@ -95,8 +95,9 @@ app.get('/information', (req, resp) => {
             //The 2 character country code is found in countryCode variable
             //API key is in keys.news
             const params = { 
-                category:technology,
-                Authorization:e1ed8fe7e8af4ea6abb1ab611507970f
+                country:countryCode,
+                apiKey:keys.news
+                
             }
             return (Promise.all([ result, getNews(params) ]));
         })
