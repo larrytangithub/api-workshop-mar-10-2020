@@ -80,7 +80,9 @@ app.get('/information', (req, resp) => {
     //Use the exact query parameter names as keys
     //Weather for city is in cityName variable
     //API key is in keys.weather
-    const params = {
+    const params = { 
+        q:cityName,
+        appid:bc5b57447ab0f5032f0ad4f1bbe11836
     }
 
     getWeather(params)
@@ -92,7 +94,9 @@ app.get('/information', (req, resp) => {
             //Use the exact query parameter names as keys
             //The 2 character country code is found in countryCode variable
             //API key is in keys.news
-            const params = {
+            const params = { 
+                category:technology,
+                Authorization:e1ed8fe7e8af4ea6abb1ab611507970f
             }
             return (Promise.all([ result, getNews(params) ]));
         })
