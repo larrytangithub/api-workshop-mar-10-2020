@@ -39,7 +39,7 @@ new OpenAPIValidator({
     .then(() => {
         //ok we can proceed with the rest of our app
         // TODO 2/2 Copy your routes from workshop02 here
-        console.info('stARTING')
+console.info('stARTING')
         // TODO GET /api/states
         app.get('/api/states',
             (req, resp) => { //handler
@@ -53,6 +53,8 @@ new OpenAPIValidator({
                 resp.json(result)
             }
         )
+
+        }
 
         // TODO GET /api/state/:state
         app.get('/api/state/:state',
